@@ -58,7 +58,7 @@ const Header = () => {
 
 
                             <Nav>
-                                <Nav.Link><Link to="/">SHOP</Link></Nav.Link>
+                                <Nav.Link><Link to="/shop">SHOP</Link></Nav.Link>
                                 <Nav.Link><Link to="/" onClick={handleShow}>TESLA ACCOUNT</Link></Nav.Link>
                             </Nav>
 
