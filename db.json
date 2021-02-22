@@ -1,0 +1,40 @@
+{
+  "accounts": [
+    {
+      "account": "nurba",
+      "password": "nurba123",
+      "id": 123123123
+    },
+    {
+      "account": "anuar",
+      "id": 1613975094834,
+      "password": "123"
+    }
+  ],
+  "cars": [
+    {
+      "name": "model-s",
+      "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/35d15221-0a5f-4dce-b484-a4db67b81dd2/bvlatuR/std/0x0/model-s@2x",
+      "id": "1-1",
+      "color":["red", "white", "black", "grey", "blue"]
+    },
+    {
+      "name": "model-3",
+      "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/409621ec-fca7-41fd-87e5-66e1caf40f5c/bvlatuR/std/2880x2400/m3-homepage-desktop",
+      "id": "2-1",
+      "color":["red", "white", "black", "grey", "blue"]
+    },
+    {
+      "name": "model-x",
+      "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/efbb6471-e1b8-4533-b41a-6df9d50c0a42/bvlatuR/std/0x0/performance-hero@2",
+      "id": "3-1",
+      "color":["red", "white", "black", "grey", "blue"]
+    },
+    {
+      "name": "model-y",
+      "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/0cf18940-c0bf-45f7-b2d8-46c3bc693c65/bvlatuR/std/0x0/model-y_R1@2",
+      "id": "4-1",
+      "color":["red", "white", "black", "grey", "blue"]
+    }
+  ]
+}

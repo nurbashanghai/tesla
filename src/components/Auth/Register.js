@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
+import {API_REGISTRATION} from "../../Adress";
 
 const Register = () => {
 
@@ -14,20 +15,20 @@ const Register = () => {
     }
 
     async function register(){
-        // let check = false;
-        // await axios.get(API_REGISTRATION).then(res => {
-        //     res.data.forEach((p) => {
-        //         if(p.account === user.account){
-        //             alert('User already exists!');
-        //             check = true;
-        //         }
-        //     })
-        // });
-        // if(!check){
-        //     axios.post(API_REGISTRATION, user).then((res) => {
-        //         window.location.reload()
-        //     })
-        // }
+        let check = false;
+        await axios.get(API_REGISTRATION).then(res => {
+            res.data.forEach((p) => {
+                if(p.account === user.account){
+                    alert('User already exists!');
+                    check = true;
+                }
+            })
+        });
+        if(!check){
+            axios.post(API_REGISTRATION, user).then((res) => {
+                window.location.reload()
+            })
+        }
     }
 
     return(
