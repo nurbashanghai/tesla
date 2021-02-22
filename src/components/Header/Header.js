@@ -30,7 +30,7 @@ const Header = () => {
 
 
     return (
-        <div >
+        <div style={{marginBottom: '100px'}} >
             <Styles >
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" >
 
@@ -58,8 +58,8 @@ const Header = () => {
 
 
                             <Nav>
-                                <Nav.Link><Link to="/shop">SHOP</Link></Nav.Link>
-                                <Nav.Link><Link to="/store" onClick={handleShow}>TESLA ACCOUNT</Link></Nav.Link>
+                                <Nav.Link><Link to="/">SHOP</Link></Nav.Link>
+                                <Nav.Link><Link to="/" onClick={handleShow}>TESLA ACCOUNT</Link></Nav.Link>
                             </Nav>
 
                         </Navbar.Collapse>
