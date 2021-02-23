@@ -4,8 +4,7 @@ import axios from "axios";
 import autopark from './carAssets/autopark.mp4';
 import lane_change from './carAssets/lane_change.mp4';
 import './CarPage.css';
-import AOS from "aos";
-import {carCartContext} from "../Contexts/CarContext";
+import Header from "../Header/Header";
 
 const CarPage = () => {
 
@@ -21,14 +20,12 @@ const CarPage = () => {
     }
 
     useEffect(async () => {
-        AOS.init({
-            duration : 1000
-        });
         await axios.get(`${API_CARS}/${id}`).then((res) => setTesla(res.data));
     },[]);
 
     return (
         <div>
+            <Header/>
             {tesla ?
                 <div className={'d-block d-md-flex'} >
 
@@ -36,9 +33,8 @@ const CarPage = () => {
                         <div> {tesla.color.map((color, index) => (
                             <button key={index+'color'+color} onClick={() => setColor(color)} style={{backgroundColor: color, borderRadius: '15px'}} >{color}</button>
                         ))} </div>
-                        <h5 className={'mt-3'} >YOUR MODEL:</h5>
-                        <h4>{tesla.name}</h4>
-                        <h5>{tesla.price}$</h5>
+                        <div>{tesla.name}</div>
+                        <div>{tesla.price}$</div>
                         YOUR COLOR:
                         <button style={{backgroundColor: color, borderRadius: '15px'}} >{color}</button>
                         <div>
@@ -51,26 +47,26 @@ const CarPage = () => {
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" id={'scrollDiv'} className={'col-12 col-md-9'} >
-                        <h1>{tesla.name}</h1>
+                    <div id={'scrollDiv'} className={'col-12 col-md-9'} >
+                        <h3>{tesla.name}</h3>
                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                             <div className="carousel-inner" style={{margin: '70px auto'}}>
                                 {tesla[`img_${color}`].map((item, index) => {
-                                    if(index === 0){
-                                        return (
-                                            <div key={index+'carCarousel'+color} className="carousel-item active" >
-                                                <img className="col-12" src={item} alt="First slide"/>
-                                            </div>
-                                        )
+                                        if(index === 0){
+                                            return (
+                                                <div key={index+'carCarousel'+color} className="carousel-item active" >
+                                                    <img className="col-12" src={item} alt="First slide"/>
+                                                </div>
+                                            )
 
-                                    } else {
-                                        return (
-                                            <div key={index+'carCarousel'+color} className="carousel-item" >
-                                                <img className="col-12" src={item} alt={`${index} lol`}/>
-                                            </div>
-                                        )
+                                        } else {
+                                            return (
+                                                <div key={index+'carCarousel'+color} className="carousel-item" >
+                                                    <img className="col-12" src={item} alt={`${index} lol`}/>
+                                                </div>
+                                            )
+                                        }
                                     }
-                                }
                                 )}
                             </div>
                             <div>
@@ -98,7 +94,7 @@ const CarPage = () => {
                         </video>
                     </div>
 
-                    <div data-aos="fade-down" className={'d-none d-md-block col-md-3'} >
+                    <div className={'d-none d-md-block col-md-3'} >
                         <div> {tesla.color.map((color, index) => (
                             <button key={index+'color'+color} onClick={() => setColor(color)} style={{backgroundColor: color, borderRadius: '15px'}} >{color}</button>
                         ))} </div>

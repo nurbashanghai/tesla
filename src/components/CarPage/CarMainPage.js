@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {API_CARS} from "../../Adress";
 import { useHistory } from "react-router-dom";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const CarMainPage = () => {
     let [cars, setCars] = useState([]);
@@ -22,14 +22,19 @@ const CarMainPage = () => {
     }
 
     return (
-        <div className={'mb-5'} >
-            {
+        <div>
+            { !cars ? <div>loading</div> :
                 cars.map((car, index) => (
-                    <div data-aos="fade-up"
-                         key={index+'car'} >
-                        <div>{car.name}</div>
+                    <div
+                         key={index+'car'}
+                         style={{position: 'relative'}}
+                    >
                         <img className={'img-fluid'} src={car.img} />
-                        <button onClick={() => toCar(car.id)} >CUSTOM ORDER</button>
+                        <div className={'position-absolute'} style={{top: '10px', left: 0, right: 0}} >
+                            <h4 data-aos="fade-down"  >{car.name}</h4>
+                            <button data-aos="fade-up" className={'btn btn-primary'} onClick={() => toCar(car.id)} >CUSTOM ORDER</button>
+                        </div>
+
                     </div>
                 ))
             }

@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {Navbar, Nav, Button, Container, Modal, ModalTitle, ModalBody, Form} from 'react-bootstrap';
 import {Link} from "react-router-dom";
-// import logo from './img/tesla_logo.png'
 import styled from "styled-components";
 import ModalHeader from "react-bootstrap/ModalHeader";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
+import {API_REGISTRATION} from "../../Adress";
 
 const Styles = styled.div`
   a, .navbar-brand, .navbar-nav .nav-link {
@@ -22,6 +24,44 @@ const Styles = styled.div`
 
 const Header = () => {
 
+    let history = useHistory();
+
+    let [users, setUsers] = useState([]);
+    let [user, setUser] = useState({});
+    let [curr, setCurr] = useState(JSON.parse(localStorage.getItem('currentUser')) ? JSON.parse(localStorage.getItem('currentUser')) : 'asd');
+
+    useEffect(() => {
+        axios.get(API_REGISTRATION).then(res => {
+            setUsers(res.data);
+        })
+    },[]);
+
+    function handleInps(e){
+        let obj = {
+            ...user,
+            [e.target.name]: e.target.value
+        };
+        setUser(obj);
+    }
+
+    function login(){
+        let check = false;
+        let currentUser = {};
+        users.forEach((p) => {
+            if(p.account === user.account && p.password === user.password){
+                check = true;
+                currentUser.account = p.account;
+                currentUser.password = p.password;
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            }
+        });
+        if(check){
+            history.push('/')
+        } else {
+            alert('No such user');
+        }
+    }
+
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -30,24 +70,19 @@ const Header = () => {
 
 
     return (
-        <div style={{marginBottom: '100px'}} >
-            <Styles >
+        <div style={{marginBottom: '60px'}} >
+            <Styles>
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" >
 
                         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                         <Navbar.Collapse id="responsive-navbar-nav">
                            <Nav>
-                               {/*<a className="navbar-brand" href="#">*/}
-                               {/*    <img className="" src={logo}  alt=""/>*/}
-                               {/*</a>*/}
-
-                               <Link to="/" >TESLA</Link>
+                               <Link to="/" ><img style={{maxHeight:'30px'}} src={'https://www.apfelpage.de/wp-content/uploads/2017/06/Tesla-Wordmark-Red.png'} /></Link>
                            </Nav>
 
 
 
-                            <Nav className="mr-auto">
-
+                            <Nav className="mx-auto">
                                 <Nav.Link><Link to="/">MODEL S</Link></Nav.Link>
                                 <Nav.Link><Link to="/series">MODEL 3</Link></Nav.Link>
                                 <Nav.Link><Link to="/about">MODEL X</Link></Nav.Link>
@@ -59,11 +94,16 @@ const Header = () => {
 
                             <Nav>
                                 <Nav.Link><Link to="/shop">SHOP</Link></Nav.Link>
-                                <Nav.Link><Link to="/" onClick={handleShow}>TESLA ACCOUNT</Link></Nav.Link>
+                                {
+                                    curr.account ? (
+                                        <Nav.Link onClick={() => localStorage.clear()}><Link onClick={() => window.location.reload()} >LOGOUT: {curr.account.toUpperCase()}</Link></Nav.Link>
+                                    ) :
+                                        <Nav.Link><Link to="/" onClick={handleShow}>ACCOUNT</Link></Nav.Link>
+                                }
+
                             </Nav>
 
                         </Navbar.Collapse>
-
                 </Navbar>
             </Styles>
 
@@ -75,16 +115,14 @@ const Header = () => {
                     <Form>
                         <Form.Group controlId='fromBasicEmail'>
                             <Form.Label>Email Adress</Form.Label>
-                            <Form.Control type='email' placeholder='Enter email'/>
+                            <Form.Control onChange={handleInps} type='email' name={'account'} placeholder='Enter email'/>
                             <Form.Text className='text-muted'>We'll never share your email with anyone else.</Form.Text>
                         </Form.Group>
                         <Form.Group controlId='fromBasicPassword'>
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type='password' placeholder='Enter password'/>
+                            <Form.Control onChange={handleInps} name={'password'} type='password' placeholder='Enter password'/>
                         </Form.Group>
-                        <Form.Group controlId='fromBasicChekbox'>
-                            <Form.Check type='checkbox' label='Remember me'/>
-                        </Form.Group>
+                        <button onClick={login} >Login</button>
                     </Form>
                 </ModalBody>
             </Modal>

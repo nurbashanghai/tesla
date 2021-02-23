@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 import ModalHeader from "react-bootstrap/ModalHeader";
 
-
 const Styles = styled.div`
   a, .navbar-brand, .navbar-nav .nav-link {
     color: black;
@@ -16,7 +15,7 @@ const Styles = styled.div`
   }
 `
 
-const Header = () => {
+const HeaderShop = () => {
 
     const [show, setShow] = useState(false);
 
@@ -26,7 +25,7 @@ const Header = () => {
 
 
     return (
-        <div >
+        <div style={{marginBottom: '60px'}} >
             <Styles >
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
 
@@ -37,7 +36,7 @@ const Header = () => {
                             {/*    <img className="" src={logo}  alt=""/>*/}
                             {/*</a>*/}
 
-                            <Link to="/" >TESLA</Link>
+                            <Link to="/" ><img style={{maxHeight:'30px'}} src={'https://www.apfelpage.de/wp-content/uploads/2017/06/Tesla-Wordmark-Red.png'} /></Link>
                         </Nav>
 
 
@@ -88,6 +87,6 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default HeaderShop;
 
 
