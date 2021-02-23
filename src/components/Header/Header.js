@@ -50,8 +50,7 @@ const Header = () => {
         users.forEach((p) => {
             if(p.account === user.account && p.password === user.password){
                 check = true;
-                currentUser.account = p.account;
-                currentUser.password = p.password;
+                currentUser = p;
                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
             }
         });
@@ -68,7 +67,6 @@ const Header = () => {
 
     const handleShow = () => setShow(true);
 
-
     return (
         <div style={{marginBottom: '60px'}} >
             <Styles>
@@ -80,8 +78,6 @@ const Header = () => {
                                <Link to="/" ><img style={{maxHeight:'30px'}} src={'https://www.apfelpage.de/wp-content/uploads/2017/06/Tesla-Wordmark-Red.png'} /></Link>
                            </Nav>
 
-
-
                             <Nav className="mx-auto">
                                 <Nav.Link><Link to="/">MODEL S</Link></Nav.Link>
                                 <Nav.Link><Link to="/series">MODEL 3</Link></Nav.Link>
@@ -90,7 +86,6 @@ const Header = () => {
                                 <Nav.Link><Link to="/store">SOLAR ROOF</Link></Nav.Link>
                                 <Nav.Link><Link to="/store">SOLAR PANELS</Link></Nav.Link>
                             </Nav>
-
 
                             <Nav>
                                 <Nav.Link><Link to="/shop">SHOP</Link></Nav.Link>

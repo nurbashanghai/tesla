@@ -3,10 +3,11 @@
     {
       "account": "nurba@gmail.com",
       "password": "nurba123",
-      "id": 123123123
+      "id": 123123123,
+      "Admin": true
     },
     {
-      "account": "anuar",
+      "account": "anuar@gmail.com",
       "id": 1613975094834,
       "password": "123"
     }
@@ -15,9 +16,11 @@
     {
       "name": "Model S",
       "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/35d15221-0a5f-4dce-b484-a4db67b81dd2/bvlatuR/std/0x0/model-s@2x",
-      "img_white": ["https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+      "img_white": [
+        "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
         "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
-      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"],
+        "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
+      ],
       "img_red": [
         "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPMR,$WS90,$IBE00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
         "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPMR,$WS90,$IBE00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
@@ -38,7 +41,13 @@
         "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSB,$WS10,$IWW00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
       ],
       "id": "1-1",
-      "color":["red", "white", "black", "grey", "blue"],
+      "color": [
+        "red",
+        "white",
+        "black",
+        "grey",
+        "blue"
+      ],
       "price": 73000,
       "interior": [
         "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$IBE00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432",
@@ -50,21 +59,39 @@
       "name": "Model 3",
       "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/409621ec-fca7-41fd-87e5-66e1caf40f5c/bvlatuR/std/2880x2400/m3-homepage-desktop",
       "id": "2-1",
-      "color":["red", "white", "black", "grey", "blue"],
+      "color": [
+        "red",
+        "white",
+        "black",
+        "grey",
+        "blue"
+      ],
       "price": 47000
     },
     {
       "name": "Model X",
       "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/efbb6471-e1b8-4533-b41a-6df9d50c0a42/bvlatuR/std/0x0/performance-hero@2",
       "id": "3-1",
-      "color":["red", "white", "black", "grey", "blue"],
+      "color": [
+        "red",
+        "white",
+        "black",
+        "grey",
+        "blue"
+      ],
       "price": 65000
     },
     {
       "name": "Model Y",
       "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/8e2df1b9-a4bf-4eb9-beec-2cf5cc77fca0/bvlatuR/std/2880x2400/Desktop-ModelY",
       "id": "4-1",
-      "color":["red", "white", "black", "grey", "blue"],
+      "color": [
+        "red",
+        "white",
+        "black",
+        "grey",
+        "blue"
+      ],
       "price": 55000
     }
   ],
@@ -76,16 +103,16 @@
       "price": 200
     },
     {
-      "name": "WALL CONNECTOR",
+      "name": "WALL FAST CONNECTOR",
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
       "id": "12-2",
-      "price": 500
+      "price": "450"
     },
     {
-      "name": "MODEL 3 ROOF RACK",
+      "name": "TESLA MODEL 3 ROOF RACK",
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_3/EXTERIOR/1128114-00-C_0.jpg",
       "id": "12-3",
-      "price": 1300
+      "price": "1800"
     },
     {
       "name": "MODEL Y LINERS",
@@ -98,6 +125,18 @@
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/ACCESSORIES_COLLECTIBLES/COLLECTIBLES/1524001-00-A_0.jpg",
       "id": "12-5",
       "price": 130
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/1017723-00-A_alt.jpg",
+      "id": 1614057156391,
+      "price": "150",
+      "name": "TESLA CAR COVER"
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1457559-00-A_alt.jpg",
+      "id": 1614057277021,
+      "price": "2300",
+      "name": "MODAL S 21 INCH WHEEL"
     }
   ]
 }
