@@ -6,6 +6,7 @@ import ModalHeader from "react-bootstrap/ModalHeader";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import {API_REGISTRATION} from "../../Adress";
+import CarCart from "../Cart/CarCart";
 
 const Styles = styled.div`
   a, .navbar-brand, .navbar-nav .nav-link {
@@ -88,6 +89,7 @@ const Header = () => {
                             </Nav>
 
                             <Nav>
+                                <button className={'btn btn-primary'} onClick={() => history.push('/cart')} >cart</button>
                                 <Nav.Link><Link to="/shop">SHOP</Link></Nav.Link>
                                 {
                                     curr.account ? (

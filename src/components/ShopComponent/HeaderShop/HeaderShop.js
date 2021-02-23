@@ -3,6 +3,7 @@ import {Navbar, Nav, Modal, ModalTitle, ModalBody, Form} from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import styled from "styled-components";
 import ModalHeader from "react-bootstrap/ModalHeader";
+import {useHistory} from 'react-router-dom';
 
 const Styles = styled.div`
   a, .navbar-brand, .navbar-nav .nav-link {
@@ -16,6 +17,7 @@ const Styles = styled.div`
 `
 
 const HeaderShop = () => {
+    let history = useHistory();
 
     const [show, setShow] = useState(false);
 
@@ -51,8 +53,8 @@ const HeaderShop = () => {
 
                         </Nav>
 
-
                         <Nav className="mr-auto">
+                            <button className={'btn btn-primary'} onClick={() => history.push('/cart')} >cart</button>
                             <Nav.Link><Link to="/store">SEARCH</Link></Nav.Link>
                             <Nav.Link><Link to="/store" onClick={handleShow}>TESLA ACCOUNT</Link></Nav.Link>
                         </Nav>

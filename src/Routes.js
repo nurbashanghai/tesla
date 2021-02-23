@@ -5,6 +5,7 @@ import CarPage from "./components/CarPage/CarPage";
 import Register from "./components/Auth/Register";
 import Shop from "./components/ShopComponent/Shop/Shop";
 import Admin from "./components/Admin/Admin";
+import CarCart from "./components/Cart/CarCart";
 
 const Routes = () => {
     return (
@@ -15,6 +16,7 @@ const Routes = () => {
                 <Route exact path={'/register'} component={Register}/>
                 <Route exact path={'/shop'} component={Shop}/>
                 <Route exact path={'/admin'} component={Admin}/>
+                <Route exact path={'/cart'} component={CarCart} />
             </Switch>
         </BrowserRouter>
     );
