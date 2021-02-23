@@ -56,35 +56,12 @@ const HeaderShop = () => {
                         <Nav className="mr-auto">
                             <button className={'btn btn-primary'} onClick={() => history.push('/cart')} >cart</button>
                             <Nav.Link><Link to="/store">SEARCH</Link></Nav.Link>
-                            <Nav.Link><Link to="/store" onClick={handleShow}>TESLA ACCOUNT</Link></Nav.Link>
                         </Nav>
 
                     </Navbar.Collapse>
 
                 </Navbar>
             </Styles>
-
-            <Modal show={show} onHide={handleClose}>
-                <ModalHeader closeButton>
-                    <ModalTitle>Log in</ModalTitle>
-                </ModalHeader>
-                <ModalBody>
-                    <Form>
-                        <Form.Group controlId='fromBasicEmail'>
-                            <Form.Label>Email Adress</Form.Label>
-                            <Form.Control type='email' placeholder='Enter email'/>
-                            <Form.Text className='text-muted'>We'll never share your email with anyone else.</Form.Text>
-                        </Form.Group>
-                        <Form.Group controlId='fromBasicPassword'>
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type='password' placeholder='Enter password'/>
-                        </Form.Group>
-                        <Form.Group controlId='fromBasicChekbox'>
-                            <Form.Check type='checkbox' label='Remember me'/>
-                        </Form.Group>
-                    </Form>
-                </ModalBody>
-            </Modal>
         </div>
     );
 };

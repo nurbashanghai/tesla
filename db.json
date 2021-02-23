@@ -10,6 +10,11 @@
       "account": "anuar@gmail.com",
       "id": 1613975094834,
       "password": "123"
+    },
+    {
+      "account": "ashat@gmail.com",
+      "id": 1614071181615,
+      "password": "123"
     }
   ],
   "cars": [
@@ -184,28 +189,16 @@
   ],
   "merch": [
     {
-      "name": "MEN'S CORP JACKET",
-      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/OUTERWEAR/JACKETS/5645685-00-A_0.jpg",
-      "id": "12-1",
-      "price": 200
-    },
-    {
       "name": "WALL FAST CONNECTOR!",
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
       "id": "12-2",
       "price": "450"
     },
     {
-      "name": "TESLA MODEL 3 ROOF RACK",
-      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_3/EXTERIOR/1128114-00-C_0.jpg",
-      "id": "12-3",
-      "price": "1800"
-    },
-    {
       "name": "MODEL Y LINERS",
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_Y/INTERIOR/1616599-00-A_0.jpg",
       "id": "12-4",
-      "price": 700
+      "price": "70000"
     },
     {
       "name": "ROADSTER TOY",
@@ -230,6 +223,12 @@
       "id": 1614059215212,
       "price": "1700",
       "name": "WIRELESS CHARGING"
+    },
+    {
+      "name": "test",
+      "id": 1614071335330,
+      "price": "test",
+      "img": "test"
     }
   ]
 }

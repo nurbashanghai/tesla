@@ -14,17 +14,25 @@ const Shop = () => {
         axios.get(API_MERCH).then(res => setGoods(res.data));
     },[]);
 
-    function addToCart(item){
+    const addToCart = (item) => {
+
+
+        let testObj = {
+            ...item,
+            cartId: Date.now()
+        };
+
         if(JSON.parse(localStorage.getItem('cart'))){
             let arr = JSON.parse(localStorage.getItem('cart'));
-            arr.push(item);
+            arr.push(testObj);
             localStorage.setItem('cart', JSON.stringify(arr));
         } else {
             let arr = [];
-            arr.push(item);
+            arr.push(testObj);
             localStorage.setItem('cart', JSON.stringify(arr));
         }
-    }
+
+    };
 
 
     return (

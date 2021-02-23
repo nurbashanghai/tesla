@@ -16,6 +16,14 @@ const CarCart = () => {
         setTotalPrice(price);
     },[goods]);
 
+    const deleteItem = (id) => { // не забыть починить
+        let arr = goods;
+        const newArr = arr.filter(item => item.cartId !== id);
+        console.log(newArr)
+        localStorage.setItem('cart', JSON.stringify(newArr));
+        setGoods(newArr);
+    };
+
     return (
         <div>
             <Header/>
@@ -24,8 +32,8 @@ const CarCart = () => {
             <div className={'container'} >
             {
                 goods ?
-                    goods.map(item => (
-                        <ul className={'col-12'} key={item.id+'cart'}>
+                    goods.map((item) => (
+                        <div className={'col-12'} key={item.cartId}>
                             <div className={'d-flex'} >
                                 <div className={'col-6 col-md-4'} >
                                     <img className={'img-fluid'} src={item.img}/>
@@ -33,10 +41,10 @@ const CarCart = () => {
                                 <div>
                                     <p>Name: {item.name}</p>
                                     <p>Price: {item.price}$</p>
+                                    <button onClick={() => deleteItem(item.cartId)} className={'btn btn-danger'} >Remove</button>
                                 </div>
-
                             </div>
-                        </ul>
+                        </div>
                     ))
                     : <h5>NOTHING TO SHOW</h5>
             }

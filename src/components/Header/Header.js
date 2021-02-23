@@ -81,11 +81,11 @@ const Header = () => {
 
                             <Nav className="mx-auto">
                                 <Nav.Link><Link to="/">MODEL S</Link></Nav.Link>
-                                <Nav.Link><Link to="/series">MODEL 3</Link></Nav.Link>
-                                <Nav.Link><Link to="/about">MODEL X</Link></Nav.Link>
-                                <Nav.Link><Link to="/store">MODEL Y</Link></Nav.Link>
-                                <Nav.Link><Link to="/store">SOLAR ROOF</Link></Nav.Link>
-                                <Nav.Link><Link to="/store">SOLAR PANELS</Link></Nav.Link>
+                                <Nav.Link><Link to="/">MODEL 3</Link></Nav.Link>
+                                <Nav.Link><Link to="/">MODEL X</Link></Nav.Link>
+                                <Nav.Link><Link to="/">MODEL Y</Link></Nav.Link>
+                                <Nav.Link><Link to="/">SOLAR ROOF</Link></Nav.Link>
+                                <Nav.Link><Link to="/">SOLAR PANELS</Link></Nav.Link>
                             </Nav>
 
                             <Nav>
