@@ -198,7 +198,7 @@
       "name": "MODEL Y LINERS",
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_Y/INTERIOR/1616599-00-A_0.jpg",
       "id": "12-4",
-      "price": "70000"
+      "price": "250"
     },
     {
       "name": "ROADSTER TOY",
@@ -225,10 +225,29 @@
       "name": "WIRELESS CHARGING"
     },
     {
-      "name": "test",
-      "id": 1614071335330,
-      "price": "test",
-      "img": "test"
+      "name": "accessories",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/tesla-shop-marketing-imagery/image-grid/modelx.jpg",
+      "id": "1-2",
+      "price": 100
+    },
+    {
+      "name": "accessories",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/tesla-shop-marketing-imagery/image-grid/v2/model3@2x.jpg",
+      "id": "2-2",
+      "price": 100
+    },
+    {
+      "name": "accessories",
+      "img": "https://electrek.co/wp-content/uploads/sites/3/2018/09/Tesla-Model-3-center-console-wrap.jpg?quality=82&strip=all",
+      "id": "3-2",
+      "price": 100
+    },
+    {
+      "name": "accessories",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_3/EXTERIOR/1128114-00-C_0.jpg",
+      "id": "4-2",
+      "price": 100
     }
-  ]
+  ],
+  "native-cart": []
 }

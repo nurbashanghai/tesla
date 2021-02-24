@@ -12,6 +12,7 @@ const CarCart = () => {
 
     useEffect(() => {
         let price = totalPrice;
+        console.log(price);
         goods.map((item) => price += +item.price);
         setTotalPrice(price);
     },[goods]);
@@ -19,10 +20,13 @@ const CarCart = () => {
     const deleteItem = (id) => { // не забыть починить
         let arr = goods;
         const newArr = arr.filter(item => item.cartId !== id);
-        console.log(newArr)
         localStorage.setItem('cart', JSON.stringify(newArr));
         setGoods(newArr);
+        setTotalPrice(0);
     };
+
+    // array?. запомнить
+    // array?.length для кол-ва товаров в корзине
 
     return (
         <div>
