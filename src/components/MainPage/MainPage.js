@@ -1,11 +1,13 @@
 import React from 'react';
 import CarMainPage from "../CarPage/CarMainPage";
 import Header from "../Header/Header";
+// import CarMainPageTest from "../CarPage/CarMainPageTest";
 
 const MainPage = () => {
     return (
         <div style={{backgroundColor: 'WhiteSmoke'}} >
             <Header/>
+            {/*<CarMainPageTest/>*/}
             <CarMainPage/>
             <div style={{position: 'relative'}} >
                 <img style={{maxWidth:'100%',maxHeight:'100%'}} src="https://www.tesla.com/sites/default/files/solarpanels/hero/D_solarpanels_hero_2880x1800_ENC.jpg" />

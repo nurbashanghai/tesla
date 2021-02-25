@@ -1,34 +1,25 @@
-input {
+.inp{
     padding: 2px 30px;
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
     border: 1px solid #ced4da;
-    border-radius: .25rem;
-    /* transition: border-color .15s; */
+    transition: border-color .15s;
     margin: 15px;
     width: 260px;
     text-align: center;
 }
-
-.Buycard form{
+.PaymentForm{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    
-    
 }
 
 .form-actions{
-    margin-top: 35px;
-}
-
-.btn{
     background-color:rgb(3, 3, 3);
     font-size: 1rem;
-    width: 290px;
+    width: 120px;
     height: 40px;
     color: #fff;
     border-radius: 25px;
@@ -36,9 +27,13 @@ input {
 
 }
 
-img{
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-logo{
     height: 50px;
     width: 80px;
 }
-
-

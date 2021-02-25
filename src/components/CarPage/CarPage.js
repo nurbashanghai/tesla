@@ -55,14 +55,14 @@ const CarPage = () => {
                                         if(index === 0){
                                             return (
                                                 <div key={index+'carCarousel'+color} className="carousel-item active" >
-                                                    <img className="col-12" src={item} alt="First slide"/>
+                                                    <img className="col-10" src={item} alt="First slide"/>
                                                 </div>
                                             )
 
                                         } else {
                                             return (
                                                 <div key={index+'carCarousel'+color} className="carousel-item" >
-                                                    <img className="col-12" src={item} alt={`${index} lol`}/>
+                                                    <img className="col-10" src={item} alt={`${index} lol`}/>
                                                 </div>
                                             )
                                         }
@@ -94,7 +94,7 @@ const CarPage = () => {
                         </video>
                     </div>
 
-                    <div className={'d-none d-md-block col-md-3'} >
+                    <div className={'d-none d-md-block col-md-3'} style={{borderLeft: '1px solid black'}} >
                         <div> {tesla.color.map((color, index) => (
                             <button key={index+'color'+color} onClick={() => setColor(color)} style={{backgroundColor: color, borderRadius: '15px'}} >{color}</button>
                         ))} </div>

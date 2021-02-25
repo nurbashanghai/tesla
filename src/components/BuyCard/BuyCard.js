@@ -1,76 +1,100 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Cards from 'react-credit-cards';
+import 'react-credit-cards/es/styles-compiled.css';
 import './BuyCard.css'
+import Header from "../Header/Header";
+import axios from "axios";
+import {API_REGISTRATION} from "../../Adress";
+import { withRouter } from 'react-router-dom'
 
+class PaymentForm extends React.Component {
+    state = {
+        cvc: '',
+        expiry: '',
+        focus: '',
+        name: '',
+        number: '',
+        totalPrice: 0
+    };
 
-function BuyCard() {
-    const [number, setNumber] = useState('');
-    const [name, setName] = useState('');
-    const [expiry, setExpiry] = useState('');
-    const [cvc, setCvc] = useState('');
+    handleInputFocus = (e) => {
+        this.setState({ focus: e.target.name });
+    };
 
+    handleInputChange = (e) => {
+        const { name, value } = e.target;
+        this.setState({ [name]: value });
+    };
 
+    componentDidMount() {
+        let price = 0;
+        JSON.parse(localStorage.getItem('cart')).map(item => price += +item.price);
+        this.setState({
+            totalPrice: price
+        });
+    }
 
+    buy = async () => {
+        let arr = {
+            buyHistory: {
+                totalPrice: this.state.totalPrice,
+                buyed: [...JSON.parse(localStorage.getItem('cart'))]
+            }
+        };
+        await axios.patch(`${API_REGISTRATION}/${JSON.parse(localStorage.getItem('currentUser')).id}`, arr);
+        localStorage.setItem('cart', '[]');
+        this.props.history.push('/')
+    };
 
-    return (
-        <>
-            
-            {/* <Cards
-                    number={number}
-                    name={name}
-                    expiry={expiry}
-                    cvc={cvc}
-            /> */}
-
-           
-                
-            <div style={{ backgroundColor: 'gold' }} className="Buycard">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/320px-MasterCard_Logo.svg.png"></img>
-                <img src="http://pngimg.com/uploads/visa/visa_PNG36.png"></img>
-
-                <form>
-                    <input
-                        type='tel'
-                        name='number'
-                        placeholder='номер карты'
-
-                        onChange={e => setNumber(e.target.value)}
-
+    render() {
+        const { location, history } = this.props;
+        return (
+            <div className="PaymentForm">
+                <Header/>
+                <div className={'d-flex flex-column my-5'} >
+                    <Cards
+                        cvc={this.state.cvc}
+                        expiry={this.state.expiry}
+                        focused={this.state.focus}
+                        name={this.state.name}
+                        number={this.state.number}
                     />
-                    <input
-                        type='text'
-                        name='name'
-                        placeholder='Имя'
-
-                        onChange={e => setName(e.target.value)}
-
-                    />
-
-                    <input
-                        type='text'
-                        name='expiry'
-                        placeholder='MM/YY Expiry'
-
-                        onChange={e => setExpiry(e.target.value)}
-
-                    />
-
-                    <input
-                        type='tel'
-                        name='cvc'
-                        placeholder='код проверки'
-
-                        onChange={e => setCvc(e.target.value)}
-
-                    />
-                    <div className="form-actions">
-                        <button className="btn">Buy</button>
-                    </div>
-
-                </form>
+                        <h3>TOTAL: {this.state.totalPrice}$</h3>
+                        <input className="inp"
+                               type="tel"
+                               name="number"
+                               placeholder="Card Number"
+                               onChange={this.handleInputChange}
+                               onFocus={this.handleInputFocus}
+                        />
+                        <input className="inp"
+                               type="text"
+                               name="name"
+                               placeholder="name"
+                               onChange={this.handleInputChange}
+                               onFocus={this.handleInputFocus}
+                        />
+                        <input className="inp"
+                               type="tel"
+                               name="expiry"
+                               placeholder="expiry"
+                               onChange={this.handleInputChange}
+                               onFocus={this.handleInputFocus}
+                        />
+                        <input className="inp"
+                               type="tel"
+                               name="cvc"
+                               placeholder="cvc"
+                               onChange={this.handleInputChange}
+                               onFocus={this.handleInputFocus}
+                        />
+                        <div>
+                            <button onClick={() => this.buy()} className="btn btn-primary col-7 ">Buy</button>
+                        </div>
+                </div>
             </div>
-        </>
-    );
-};
+        );
+    }
+}
 
-export default BuyCard;
+export default withRouter(PaymentForm);

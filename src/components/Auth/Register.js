@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import {API_REGISTRATION} from "../../Adress";
+import {useHistory} from 'react-router-dom';
 
 const Register = () => {
+    let history = useHistory();
 
     let [user, setUser] = useState({});
     function handleInputs(e){
@@ -25,8 +27,8 @@ const Register = () => {
             })
         });
         if(!check){
-            axios.post(API_REGISTRATION, user).then((res) => {
-                window.location.reload()
+            axios.post(API_REGISTRATION, user).then(() => {
+                history.replace('/')
             })
         }
     }

@@ -4,7 +4,26 @@
       "account": "nurba@gmail.com",
       "password": "nurba123",
       "id": 123123123,
-      "Admin": true
+      "Admin": true,
+      "buyHistory": {
+        "totalPrice": 580,
+        "buyed": [
+          {
+            "name": "FAST CHARGER",
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+            "id": "12-2",
+            "price": "450",
+            "cartId": 1614186786553
+          },
+          {
+            "name": "ROADSTER TOY",
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/ACCESSORIES_COLLECTIBLES/COLLECTIBLES/1524001-00-A_0.jpg",
+            "id": "12-5",
+            "price": 130,
+            "cartId": 1614186787206
+          }
+        ]
+      }
     },
     {
       "account": "anuar@gmail.com",
@@ -15,6 +34,42 @@
       "account": "ashat@gmail.com",
       "id": 1614071181615,
       "password": "123"
+    },
+    {
+      "account": "123@mail.com",
+      "id": 1614188140184,
+      "password": "123"
+    },
+    {
+      "account": "beka@mail.com",
+      "id": 1614188376521,
+      "password": "beka",
+      "buyHistory": {
+        "totalPrice": 730,
+        "buyed": [
+          {
+            "name": "FAST CHARGER",
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+            "id": "12-2",
+            "price": "450",
+            "cartId": 1614188402929
+          },
+          {
+            "name": "ROADSTER TOY",
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/ACCESSORIES_COLLECTIBLES/COLLECTIBLES/1524001-00-A_0.jpg",
+            "id": "12-5",
+            "price": 130,
+            "cartId": 1614188404138
+          },
+          {
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/1017723-00-A_alt.jpg",
+            "id": 1614057156391,
+            "price": "150",
+            "name": "TESLA CAR COVER",
+            "cartId": 1614188405025
+          }
+        ]
+      }
     }
   ],
   "cars": [
@@ -189,16 +244,10 @@
   ],
   "merch": [
     {
-      "name": "WALL FAST CONNECTOR!",
+      "name": "FAST CHARGER",
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
       "id": "12-2",
       "price": "450"
-    },
-    {
-      "name": "MODEL Y LINERS",
-      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_Y/INTERIOR/1616599-00-A_0.jpg",
-      "id": "12-4",
-      "price": "250"
     },
     {
       "name": "ROADSTER TOY",
@@ -225,29 +274,120 @@
       "name": "WIRELESS CHARGING"
     },
     {
-      "name": "accessories",
-      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/tesla-shop-marketing-imagery/image-grid/modelx.jpg",
-      "id": "1-2",
-      "price": 100
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/OUTERWEAR/JACKETS/5645685-00-A_0.jpg",
+      "id": "123321",
+      "price": 200,
+      "name": "MAN'S CORP JACKET"
     },
     {
-      "name": "accessories",
-      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/tesla-shop-marketing-imagery/image-grid/v2/model3@2x.jpg",
-      "id": "2-2",
-      "price": 100
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_Y/INTERIOR/1616599-00-A_0.jpg",
+      "name": "MODEL Y LINEARS",
+      "price": 220,
+      "id": 3123123123121312
     },
     {
-      "name": "accessories",
-      "img": "https://electrek.co/wp-content/uploads/sites/3/2018/09/Tesla-Model-3-center-console-wrap.jpg?quality=82&strip=all",
-      "id": "3-2",
-      "price": 100
-    },
-    {
-      "name": "accessories",
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_3/EXTERIOR/1128114-00-C_0.jpg",
-      "id": "4-2",
-      "price": 100
+      "name": "MODEL 3 ROOF RACK",
+      "price": 600,
+      "id": 1.231897345983746e+23
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1448634-00-A_0.jpg",
+      "name": "MODEL S 19 INCH WHEELS",
+      "price": 3400,
+      "id": 1.2310934834905783e+26
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/INTERIOR/1458421-00-A_1.jpg",
+      "name": "MODEL S/X Coat Hooks",
+      "price": 120,
+      "id": 1231235499999
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/INTERIOR/1562264-00-A_1.jpg",
+      "name": "WIRELESS CHARGER MODEL S",
+      "id": 12311345953,
+      "price": 170
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/INTERIOR/1086535-00-A_0.jpg",
+      "name": "MODEL S/X Performance Pedal",
+      "price": "180",
+      "id": 12399494000
     }
   ],
-  "native-cart": []
+  "native-cart": [
+    {
+      "name": "WALL FAST CONNECTOR!",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+      "id": 1614155489947,
+      "price": "450"
+    },
+    {
+      "name": "ROADSTER TOY",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/ACCESSORIES_COLLECTIBLES/COLLECTIBLES/1524001-00-A_0.jpg",
+      "id": 1614155494522,
+      "price": 130
+    },
+    {
+      "name": "WALL FAST CONNECTOR!",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+      "id": 1614157098826,
+      "price": "450"
+    },
+    {
+      "name": "ROADSTER TOY",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/ACCESSORIES_COLLECTIBLES/COLLECTIBLES/1524001-00-A_0.jpg",
+      "id": 1614157101297,
+      "price": 130
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1448634-00-A_0.jpg",
+      "name": "MODEL S 19 INCH WHEELS",
+      "price": 3400,
+      "id": 1614157221585
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/INTERIOR/1458421-00-A_1.jpg",
+      "name": "MODEL S/X Coat Hooks",
+      "price": 120,
+      "id": 1614157223140
+    },
+    {
+      "name": "WALL FAST CONNECTOR!",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+      "id": 1614159815100,
+      "price": "450"
+    },
+    {
+      "name": "ROADSTER TOY",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/ACCESSORIES_COLLECTIBLES/COLLECTIBLES/1524001-00-A_0.jpg",
+      "id": 1614159816933,
+      "price": 130
+    },
+    {
+      "name": "WALL FAST CONNECTOR!",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+      "id": 1614159904530,
+      "price": "450"
+    },
+    {
+      "name": "WALL FAST CONNECTOR!",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+      "id": 1614166518861,
+      "price": "450"
+    },
+    {
+      "name": "ROADSTER TOY",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/ACCESSORIES_COLLECTIBLES/COLLECTIBLES/1524001-00-A_0.jpg",
+      "id": 1614166521407,
+      "price": 130
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/1017723-00-A_alt.jpg",
+      "id": 1614166523660,
+      "price": "150",
+      "name": "TESLA CAR COVER"
+    }
+  ]
 }

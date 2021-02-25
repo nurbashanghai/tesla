@@ -34,14 +34,9 @@ const HeaderShop = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
-                            {/*<a className="navbar-brand" href="#">*/}
-                            {/*    <img className="" src={logo}  alt=""/>*/}
-                            {/*</a>*/}
 
                             <Link to="/" ><img style={{maxHeight:'30px'}} src={'https://www.apfelpage.de/wp-content/uploads/2017/06/Tesla-Wordmark-Red.png'} /></Link>
                         </Nav>
-
-
 
                         <Nav className="mr-auto">
 
@@ -49,14 +44,10 @@ const HeaderShop = () => {
                             <Nav.Link><Link to="/series">VEHICLE ACCESSORIES</Link></Nav.Link>
                             <Nav.Link><Link to="/about">APPAREL</Link></Nav.Link>
                             <Nav.Link><Link to="/store">LIFESTYLE</Link></Nav.Link>
-
+                            <Nav.Link><Link to="/cart">CART</Link></Nav.Link>
 
                         </Nav>
 
-                        <Nav className="mr-auto">
-                            <button className={'btn btn-primary'} onClick={() => history.push('/cart')} >cart</button>
-                            <Nav.Link><Link to="/store">SEARCH</Link></Nav.Link>
-                        </Nav>
 
                     </Navbar.Collapse>
 

@@ -89,11 +89,13 @@ const Header = () => {
                             </Nav>
 
                             <Nav>
-                                <button className={'btn btn-primary'} onClick={() => history.push('/cart')} >cart</button>
                                 <Nav.Link><Link to="/shop">SHOP</Link></Nav.Link>
                                 {
                                     curr.account ? (
-                                        <Nav.Link onClick={() => localStorage.clear()}><Link onClick={() => window.location.reload()} >LOGOUT: {curr.account.toUpperCase()}</Link></Nav.Link>
+                                        <>
+                                            <div><button className={'btn btn-primary'} onClick={() => history.push('/cart')} >cart</button></div>
+                                            <Nav.Link onClick={() => localStorage.clear()}><Link onClick={() => window.location.reload()} >LOGOUT: {curr.account.toUpperCase()}</Link></Nav.Link>
+                                        </>
                                     ) :
                                         <Nav.Link><Link to="/" onClick={handleShow}>ACCOUNT</Link></Nav.Link>
                                 }
@@ -119,7 +121,8 @@ const Header = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control onChange={handleInps} name={'password'} type='password' placeholder='Enter password'/>
                         </Form.Group>
-                        <button onClick={login} >Login</button>
+                        <button className={'btn btn-primary'} onClick={login} >Login</button>
+                        <button className={'btn btn-primary mx-5'} onClick={() => history.push('/register')} >Register</button>
                     </Form>
                 </ModalBody>
             </Modal>

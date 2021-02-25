@@ -1,0 +1,8 @@
+.product-catalogue__item-list_favorite {
+    max-width: 100%;
+    margin-left:0;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}

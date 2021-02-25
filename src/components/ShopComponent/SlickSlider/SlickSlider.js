@@ -8,8 +8,8 @@ import axios from "axios";
 export default function AutoPlay() {
     let [merch, setMerch] = useState([]);
 
-    useEffect(() => {
-        axios.get(API_MERCH).then(res => setMerch(res.data))
+    useEffect(async () => {
+        await axios.get(API_MERCH).then(res => setMerch(res.data.splice(0, 4)));
     },[]);
 
     const settings = {
@@ -23,7 +23,7 @@ export default function AutoPlay() {
         cssEase: "linear"
     };
     return (
-        <div>
+        <div >
             <h4 className='mt-5 mb-3'>BEST SELLERS</h4>
             <Slider {...settings}>
                 {merch ?

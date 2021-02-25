@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import wallCon from './img/wall-connector-gen3@2x.jpg'
 import liners from './img/model_y_liners@2x.jpg'
 import {Carousel} from "react-bootstrap";
-import HeaderShop from "../HeaderShop/HeaderShop";
+import Header from "../../Header/Header";
 import AutoPlay from "../SlickSlider/SlickSlider";
 import axios from "axios";
 import {API_MERCH} from "../../../Adress";
@@ -10,12 +10,26 @@ import {API_MERCH} from "../../../Adress";
 const Shop = () => {
     let [goods, setGoods] = useState([]);
 
-    useEffect(() => {
-        axios.get(API_MERCH).then(res => setGoods(res.data));
-    },[]);
+    const [page, setPage] = useState(1);
+    const [allPages, setAllPages] = useState(null);
+    const [numGood, setNumGood] = useState(0);
+
+    useEffect(async () => {
+        axios.get(`${API_MERCH}?_limit=9&_page=${page}`).then(res => setGoods(res.data));
+        await axios.get(`${API_MERCH}?_limit=9`).then(res => setNumGood(res.headers['x-total-count']));
+        countPages()
+    },[numGood, page]);
+
+    function countPages(){
+        let arrOfPages = [];
+        for(let i = 1 ; i <= (Math.ceil(+numGood / 9)); i++){
+            arrOfPages.push(i);
+        }
+        setAllPages(arrOfPages);
+        console.log(numGood)
+    }
 
     const addToCart = (item) => {
-
 
         let testObj = {
             ...item,
@@ -31,14 +45,36 @@ const Shop = () => {
             arr.push(testObj);
             localStorage.setItem('cart', JSON.stringify(arr));
         }
-
     };
+
+    function searchGoods(str){
+        axios.get(`${API_MERCH}?_limit=9&_page=${page}&q=${str}`).then(res => setGoods(res.data));
+        setPage(1);
+    }
+
+    const addToFavorite = (item) => {
+        let testNewObj = {
+            ...item,
+            cartId: Date.now()
+        };
+
+        if(JSON.parse(localStorage.getItem('favorite'))){
+            let arr = JSON.parse(localStorage.getItem('favorite'));
+            arr.push(testNewObj);
+            localStorage.setItem('favorite', JSON.stringify(arr));
+        } else {
+            let arr = [];
+            arr.push(testNewObj);
+            localStorage.setItem('favorite', JSON.stringify(arr));
+        }
+    };
+
 
 
     return (
         <div>
             <div >
-                <HeaderShop/>
+                <Header/>
                 <Carousel>
                     <Carousel.Item>
                         <Carousel.Caption >
@@ -53,8 +89,8 @@ const Shop = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>MODEL Y LINEARS</h3>
+                            <p>The best linears for your TESLA MODEL Y</p>
                         </Carousel.Caption>
                         <img
                             className="d-block w-100"
@@ -66,25 +102,38 @@ const Shop = () => {
                 </Carousel>
             </div>
 
-            <AutoPlay/>
-
-            <h3 className={'m-5'} >Our Shop:</h3>
-
-            <div className={'d-flex flex-wrap'} >
-            {
-                goods ?
-                    goods.map(item => (
-                            <div className={'col-6 col-md-4'} style={{border: '1px solid'}} key={item.id + 'goods'} >
-                                <img className={'img-fluid'} src={item.img} />
-                                <h5>{item.name}</h5>
-                                <h5>{item.price}$</h5>
-                                <button onClick={() => addToCart(item)} >Add To Cart</button>
-                            </div>
-                        )
-                    ) : null
-            }
+            <div className={'container'} >
+                <AutoPlay/>
             </div>
 
+            <h3 className={'my-5'} >Our Shop:</h3>
+            <div>
+                <h3>SEARCH </h3><input onChange={(e) => searchGoods(e.target.value)} />
+            </div>
+            <div className={'d-flex justify-content-center my-2'} >
+                {
+                    allPages ?  allPages.map(item => (<button className={'btn btn-primary mx-1'} onClick={() => setPage(item)} >{item}</button>)) : <h1>test</h1>
+                }
+            </div>
+            <div className={'container'} >
+                <div className={'d-flex flex-wrap '} >
+                {
+                    goods ?
+                        goods.map(item => (
+                                <div className={'col-6 col-sm-3 col-md-4 p-1'} style={{border: '1px solid'}} key={item.id + 'goods'} >
+                                    <img className={'img-fluid p-2'} src={item.img} />
+                                    <p>{item.name}</p>
+                                    <p>{item.price}$</p>
+                                    <div className={'my-2'} >
+                                        <button onClick={() => addToCart(item)} className={'btn btn-primary'} >Add</button>
+                                    </div>
+                                        <button onClick={() => addToFavorite(item)} className={'btn btn-primary my-2'}>Favorite</button>
+                                </div>
+                            )
+                        ) : null
+                }
+                </div>
+            </div>
         </div>
 
     );
