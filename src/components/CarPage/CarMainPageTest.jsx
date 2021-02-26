@@ -2,19 +2,19 @@ import React from 'react';
 import './CarMainPageTest.css';
 import ReactDOM from "react-dom";
 import Swiper from "swiper";
-import homePageDesktop from '../../../public/img/modals-homepage-desktop.jpeg';
-import modelY from '../../../public/img/Desktop-ModelY.jpeg';
-import m3HomePage from '../../../public/img/m3-homepage-desktop.jpeg';
-import mxHomePage from '../../../public/img/mx-homepage-desktop.jpeg';
-import solarPanels from '../../../public/img/Desktop-SolarPanels.jpeg';
-import solarRoof from '../../../public/img/Desktop-SolarRoof.jpeg';
-import deskAcces from '../../../public/img/Desktop-Accessories.jpeg';
+import homePageDesktop from './img/modals-homepage-desktop.jpeg';
+import modelY from './img/Desktop-ModelY.jpeg';
+import m3HomePage from './img/m3-homepage-desktop.jpeg';
+import mxHomePage from './img/mx-homepage-desktop.jpeg';
+import solarPanels from './img/Desktop-SolarPanels.jpeg';
+import solarRoof from './img/Desktop-SolarRoof.jpeg';
+import deskAcces from './img/Desktop-Accessories.jpeg';
 
 const CarMainPageTest = () => {
 
     const node = ReactDOM.findDOMNode(this);
 
-// Get child nodes
+    // Get child nodes
     let wrapper = node.querySelector('.wrapper');
 
 
@@ -162,7 +162,7 @@ const CarMainPageTest = () => {
     }
 
     pageSlider.init();
-// header to div
+    // header to div
     return (
         <div>
             <div className="wrapper">

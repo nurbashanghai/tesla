@@ -72,8 +72,8 @@ const Shop = () => {
 
 
     return (
-        <div>
-            <div >
+        <div style={{backgroundColor: 'WhiteSmoke'}} >
+            <div>
                 <Header/>
                 <Carousel>
                     <Carousel.Item>
@@ -106,28 +106,28 @@ const Shop = () => {
                 <AutoPlay/>
             </div>
 
-            <h3 className={'my-5'} >Our Shop:</h3>
+            <h3 className={'my-5'} style={{textShadow: '1px 5px 25px'}} >Our Shop:</h3>
             <div>
-                <h3>SEARCH </h3><input onChange={(e) => searchGoods(e.target.value)} />
+                <h3 style={{textShadow: '1px 5px 25px'}} >SEARCH </h3><input onChange={(e) => searchGoods(e.target.value)} />
             </div>
             <div className={'d-flex justify-content-center my-2'} >
                 {
-                    allPages ?  allPages.map(item => (<button className={'btn btn-primary mx-1'} onClick={() => setPage(item)} >{item}</button>)) : <h1>test</h1>
+                    allPages ?  allPages.map(item => (<button className={'btn btn-dark mx-1'} style={{border: '1px solid', borderRadius: '25px'}} onClick={() => setPage(item)} >{item}</button>)) : <h1>test</h1>
                 }
             </div>
             <div className={'container'} >
-                <div className={'d-flex flex-wrap '} >
+                <div className={'d-flex flex-wrap justify-content-center'} >
                 {
                     goods ?
                         goods.map(item => (
-                                <div className={'col-6 col-sm-3 col-md-4 p-1'} style={{border: '1px solid'}} key={item.id + 'goods'} >
-                                    <img className={'img-fluid p-2'} src={item.img} />
-                                    <p>{item.name}</p>
-                                    <p>{item.price}$</p>
+                                <div className={'col-6 col-sm-3 col-md-3 m-md-1 p-1'} style={{boxShadow: '3px 5px 10px',border: '1px solid', borderRadius: '25px'}} key={item.id + 'goods'} >
+                                    <img className={'img-fluid p-1'} style={{backgroundColor: 'black', border: '1px solid', borderRadius: '25px'}} src={item.img} />
+                                    <p style={{textShadow: '1px 5px 25px'}} >{item.name}</p>
+                                    <h5 style={{borderBottom: '1px solid'}} >Price: {item.price}$</h5>
                                     <div className={'my-2'} >
-                                        <button onClick={() => addToCart(item)} className={'btn btn-primary'} >Add</button>
+                                        <button onClick={() => addToCart(item)} className={'btn btn-dark'} >Add</button>
                                     </div>
-                                        <button onClick={() => addToFavorite(item)} className={'btn btn-primary my-2'}>Favorite</button>
+                                        <button onClick={() => addToFavorite(item)} className={'btn btn-dark my-2'}>Favorite</button>
                                 </div>
                             )
                         ) : null

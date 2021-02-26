@@ -24,7 +24,7 @@ export default function AutoPlay() {
     };
     return (
         <div >
-            <h4 className='mt-5 mb-3'>BEST SELLERS</h4>
+            <h2 className='mt-5 mb-3' style={{textShadow: '1px 5px 10px'}} >BEST SELLERS</h2>
             <Slider {...settings}>
                 {merch ?
                     merch.map(item => (
@@ -34,7 +34,7 @@ export default function AutoPlay() {
                                 src={item.img}
                                 alt="Second slide"
                             />
-                            <h5 className='mt-3'>{item.name}</h5>
+                            <p className='mt-3'>{item.name}</p>
                         </div>
                     ))
                     : null

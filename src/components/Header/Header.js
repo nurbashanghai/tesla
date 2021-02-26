@@ -68,36 +68,41 @@ const Header = () => {
 
     const handleShow = () => setShow(true);
 
+    const redirectToTesla = (id) => {
+        localStorage.setItem('carId', id);
+        window.location.pathname = '/carpage'
+    };
+
     return (
         <div style={{marginBottom: '60px'}} >
             <Styles>
-                <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" >
+                <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
 
                         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                         <Navbar.Collapse id="responsive-navbar-nav">
                            <Nav>
-                               <Link to="/" ><img style={{maxHeight:'30px'}} src={'https://www.apfelpage.de/wp-content/uploads/2017/06/Tesla-Wordmark-Red.png'} /></Link>
+                               <a href="http://localhost:3000/home/" ><img style={{maxHeight:'30px'}} src={'https://www.apfelpage.de/wp-content/uploads/2017/06/Tesla-Wordmark-Red.png'} /></a>
                            </Nav>
 
                             <Nav className="mx-auto">
-                                <Nav.Link><Link to="/">MODEL S</Link></Nav.Link>
-                                <Nav.Link><Link to="/">MODEL 3</Link></Nav.Link>
-                                <Nav.Link><Link to="/">MODEL X</Link></Nav.Link>
-                                <Nav.Link><Link to="/">MODEL Y</Link></Nav.Link>
-                                <Nav.Link><Link to="/">SOLAR ROOF</Link></Nav.Link>
-                                <Nav.Link><Link to="/">SOLAR PANELS</Link></Nav.Link>
+                                <Nav.Link><Link style={{textShadow: '1px 5px 25px'}} onClick={() => redirectToTesla('1-1')}>MODEL S</Link></Nav.Link>
+                                <Nav.Link><Link style={{textShadow: '1px 5px 25px'}} onClick={() => redirectToTesla('2-1')}>MODEL 3</Link></Nav.Link>
+                                <Nav.Link><Link style={{textShadow: '1px 5px 25px'}} onClick={() => redirectToTesla('3-1')}>MODEL X</Link></Nav.Link>
+                                <Nav.Link><Link style={{textShadow: '1px 5px 25px'}} onClick={() => redirectToTesla('4-1')}>MODEL Y</Link></Nav.Link>
                             </Nav>
 
                             <Nav>
-                                <Nav.Link><Link to="/shop">SHOP</Link></Nav.Link>
+                                <Nav.Link><Link style={{textShadow: '1px 5px 25px'}} to="/shop">SHOP</Link></Nav.Link>
                                 {
                                     curr.account ? (
                                         <>
-                                            <div><button className={'btn btn-primary'} onClick={() => history.push('/cart')} >cart</button></div>
-                                            <Nav.Link onClick={() => localStorage.clear()}><Link onClick={() => window.location.reload()} >LOGOUT: {curr.account.toUpperCase()}</Link></Nav.Link>
+                                            <div><button className={'btn btn-dark'} style={{border: '1px solid', borderRadius: '25px'}} onClick={() => history.push('/cart')} >CART</button></div>
+                                            <Nav.Link onClick={() => {
+                                                localStorage.clear();
+                                            }}><Link style={{textShadow: '1px 5px 25px'}} onClick={() => window.location.reload()} >LOGOUT: {curr.account.toUpperCase()}</Link></Nav.Link>
                                         </>
                                     ) :
-                                        <Nav.Link><Link to="/" onClick={handleShow}>ACCOUNT</Link></Nav.Link>
+                                        <Nav.Link><Link style={{textShadow: '1px 5px 25px'}} to="/login" onClick={handleShow}>ACCOUNT</Link></Nav.Link>
                                 }
 
                             </Nav>

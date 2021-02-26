@@ -38,26 +38,25 @@ const CarCart = () => {
     return (
         <div>
             <Header/>
-            <h4>CART:</h4>
-            <h5>Total Price ${totalPrice}</h5>
-            <div className={'container'} >
-                {
-                    goods?.[0] ? <button onClick={buy} className={'btn btn-primary'} >Buy</button> : null
-                }
+            <h4 style={{textShadow: '1px 5px 25px'}} className={'mt-5'} >CART:</h4>
+            <h5 style={{textShadow: '1px 5px 25px'}} >Total Price ${totalPrice}</h5>
+            {
+                goods?.[0] ? <button style={{borderRadius: '15px'}} onClick={buy} className={'btn btn-dark my-5'} >Buy</button> : null
+            }
+            <div className={'container d-flex flex-wrap'} >
             {
                 goods?.[0] ?
                     goods.map((item) => (
-                        <div className={'col-12'} key={item.cartId}>
-                            <div className={'d-flex'} >
-                                <div className={'col-6 col-md-4'} >
-                                    <img className={'img-fluid'} src={item.img}/>
-                                </div>
-                                <div>
-                                    <p>Name: {item.name}</p>
-                                    <p>Price: {item.price}$</p>
+                        <div className={'col-6 col-md-3'} key={item.cartId}>
+                            <div className={'col-12 col-sm-3 col-md-12 m-md-1 p-1'} style={{boxShadow: '3px 5px 10px',border: '1px solid', borderRadius: '25px'}} key={item.id + 'goods'} >
+                                <img className={'img-fluid p-1'} style={{backgroundColor: 'black', border: '1px solid', borderRadius: '25px'}} src={item.img} />
+                                <p>{item.name}</p>
+                                <h5 style={{borderBottom: '1px solid'}} >Price: {item.price}$</h5>
+                                <div className={'my-2'} >
                                     <button onClick={() => deleteItem(item.cartId)} className={'btn btn-danger'} >Remove</button>
                                 </div>
                             </div>
+
                         </div>
                     ))
                     : <h5>NOTHING TO SHOW</h5>
@@ -66,17 +65,18 @@ const CarCart = () => {
 
             { user.buyHistory ? (
 
-                <div>
-                    <button onClick={() => setModal(!modal)}>Show/Hide History</button>
+                <div className={'my-5'} >
+                    <button className={'btn btn-dark'} style={{borderRadius: '15px'}} onClick={() => setModal(!modal)}>Show/Hide History</button>
                     {
                         modal ?
-                            <div className={'container d-flex flex-column'} style={{border: '1px solid black'}}>
-                                <h4>Spent: {user.buyHistory.totalPrice}$</h4>
+                            <div className={'container d-flex flex-column my-5'} style={{border: '1px solid black'}}>
+                                <h4> Purchase History: </h4>
+                                <h5>Spent: {user.buyHistory.totalPrice}$</h5>
                                 {
                                     user.buyHistory.buyed.map((item, index) => (
-                                        <div className={'col-12 m-2'} key={index + 'buyed'}>
-                                            <div>NAME: {item.name}</div>
-                                            <div>PRICE: {item.price}</div>
+                                        <div className={'col-12 m-2'} style={{borderBottom: '1px solid black'}} key={index + 'buyed'}>
+                                            <p>NAME: {item.name}  PRICE: {item.price}$</p>
+                                            <img className={'img-fluid p-1 col-7 col-md-2'} src={item.img} />
                                         </div>
                                     ))
                                 }
@@ -84,6 +84,23 @@ const CarCart = () => {
                             : null
                     }
                 </div>
+                )
+                : null
+            }
+
+            { user.car ? (
+
+                    <div className={'my-5'} >
+                                <div className={'container d-flex flex-column my-5'} style={{border: '1px solid black'}}>
+                                    <h4>Car Purchase History: </h4>
+                                            <div className={'col-12 m-2'} style={{borderBottom: '1px solid black'}} >
+                                                <p>NAME: {user.car.name}  PRICE: {user.car.price}$</p>
+                                                <p>Version: {user.car.specs.version}</p>
+                                                <p>Color: {user.car.choosenColor}</p>
+                                                <img className={'img-fluid p-1 col-7 col-md-2'} src={`${user.car[`img_${user.car.choosenColor}`][0]}`} />
+                                            </div>
+                                </div>
+                    </div>
                 )
                 : null
             }
