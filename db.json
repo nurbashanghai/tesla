@@ -623,6 +623,45 @@
     }
   ],
   "car_model_native": {
-
+    "name": "Model S",
+    "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/35d15221-0a5f-4dce-b484-a4db67b81dd2/bvlatuR/std/0x0/model-s@2x",
+    "img_white": [
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
+    ],
+    "img_red": [
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPMR,$WS90,$IBE00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPMR,$WS90,$IBE00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPMR,$WS90,$IBE00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
+    ],
+    "img_black": [
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PBSB,$WS10,$IWW00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PBSB,$WS10,$IWW00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
+    ],
+    "img_grey": [
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PMNG,$WS10,$IWW00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PMNG,$WS10,$IWW00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PMNG,$WS90,$IBE00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432"
+    ],
+    "img_blue": [
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSB,$WS10,$IWW00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSB,$WS10,$IWW00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSB,$WS10,$IWW00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
+    ],
+    "id": "1-1",
+    "color": [
+      "red",
+      "white",
+      "black",
+      "grey",
+      "blue"
+    ],
+    "price": 73000,
+    "interior": [
+      "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$IBE00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$IWW00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432",
+      "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$ICW00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432"
+    ]
   }
 }
