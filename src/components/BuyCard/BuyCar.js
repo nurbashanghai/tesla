@@ -40,6 +40,7 @@ class CarPaymentForm extends React.Component {
         };
         await axios.patch(`${API_REGISTRATION}/${JSON.parse(localStorage.getItem('currentUser')).id}`, arr);
         localStorage.setItem('carOrder', '[]');
+        alert('Куплено! Проверьте в истории заказов');
         window.location.pathname = '/home'
     };
 

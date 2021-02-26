@@ -69,13 +69,13 @@ const CarCart = () => {
                     <button className={'btn btn-dark'} style={{borderRadius: '15px'}} onClick={() => setModal(!modal)}>Show/Hide History</button>
                     {
                         modal ?
-                            <div className={'container d-flex flex-column my-5'} style={{border: '1px solid black'}}>
+                            <div className={'container d-flex flex-column my-5'} >
                                 <h4> Purchase History: </h4>
                                 <h5>Spent: {user.buyHistory.totalPrice}$</h5>
                                 {
                                     user.buyHistory.buyed.map((item, index) => (
-                                        <div className={'col-12 m-2'} style={{borderBottom: '1px solid black'}} key={index + 'buyed'}>
-                                            <p>NAME: {item.name}  PRICE: {item.price}$</p>
+                                        <div className={'col-12 m-2 mb-5'}  key={index + 'buyed'}>
+                                            <h5>NAME: {item.name}  PRICE: {item.price}$</h5>
                                             <img className={'img-fluid p-1 col-7 col-md-2'} src={item.img} />
                                         </div>
                                     ))

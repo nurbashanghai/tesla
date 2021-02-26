@@ -43,7 +43,8 @@ class PaymentForm extends React.Component {
         };
         await axios.patch(`${API_REGISTRATION}/${JSON.parse(localStorage.getItem('currentUser')).id}`, arr);
         localStorage.setItem('cart', '[]');
-        window.location.pathname = '/home'
+        alert('Куплено! Проверьте в истории покупок');
+        window.location.pathname = '/cart'
     };
 
     render() {

@@ -12,6 +12,10 @@ class SitePath extends Component {
         };
     };
 
+    redirectHome = () => {
+        window.location.pathname = '/home'
+    };
+
     render() {
         const { filterParamFunc, sitepathParam, filterParam, mainUrlparam } = this.props;
         const activeCategory = filterParam ? {
@@ -23,7 +27,7 @@ class SitePath extends Component {
         return (
             <div className="site-path">
                 <ul className="site-path__items">
-                    <li className="site-path__item"><Link to='/'>Главная</Link></li>
+                    <li className="site-path__item"><Link onClick={() => this.redirectHome()}>Главная</Link></li>
 
                     {sitepathParam && <li className="site-path__item"><Link to={`/carPage/${sitepathParam.id}`}>{sitepathParam.title}</Link></li>}
                 </ul>

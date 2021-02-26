@@ -93,6 +93,7 @@ const Header = () => {
 
                             <Nav>
                                 <Nav.Link><Link style={{textShadow: '1px 5px 25px'}} to="/shop">SHOP</Link></Nav.Link>
+                                <Nav.Link><Link style={{textShadow: '1px 5px 25px'}} to="/favorite">FAVORITE</Link></Nav.Link>
                                 {
                                     curr.account ? (
                                         <>
