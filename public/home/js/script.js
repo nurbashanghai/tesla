@@ -11,6 +11,11 @@ login_to.addEventListener('click', function(){
 	window.location.pathname = '/login'
 });
 
+let show_now_btn = document.getElementById('show_now_id');
+show_now_btn.addEventListener('click', function(){
+	window.location.pathname = '/shop'
+});
+
 id_s.addEventListener('click', function(){
 	localStorage.setItem('carId', '1-1');
 	window.location.pathname = '/carpage'

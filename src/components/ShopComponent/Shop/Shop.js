@@ -112,7 +112,7 @@ const Shop = () => {
             </div>
             <div className={'d-flex justify-content-center my-2'} >
                 {
-                    allPages ?  allPages.map(item => (<button className={'btn btn-dark mx-1'} style={{border: '1px solid', borderRadius: '25px'}} onClick={() => setPage(item)} >{item}</button>)) : <h1>test</h1>
+                    allPages ?  allPages.map(item => (<button key={item + Date.now()} className={'btn btn-dark mx-1'} style={{border: '1px solid', borderRadius: '25px'}} onClick={() => setPage(item)} >{item}</button>)) : <h1>test</h1>
                 }
             </div>
             <div className={'container'} >

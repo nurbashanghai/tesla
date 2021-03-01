@@ -6,49 +6,28 @@
       "id": 123123123,
       "Admin": true,
       "buyHistory": {
-        "totalPrice": 6770,
+        "totalPrice": 2900,
         "buyed": [
           {
             "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/1017723-00-A_alt.jpg",
             "id": 1614057156391,
             "price": "150",
             "name": "TESLA CAR COVER",
-            "cartId": 1614314958458
+            "cartId": 1614333582012
           },
           {
             "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1457559-00-A_alt.jpg",
             "id": 1614057277021,
             "price": "2300",
             "name": "MODAL S 21 INCH",
-            "cartId": 1614314959272
+            "cartId": 1614333582939
           },
           {
-            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/OUTERWEAR/JACKETS/5645685-00-A_0.jpg",
-            "id": "123321",
-            "price": 200,
-            "name": "MAN'S CORP JACKET",
-            "cartId": 1614314960588
-          },
-          {
-            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_3/EXTERIOR/1128114-00-C_0.jpg",
-            "name": "MODEL 3 ROOF RACK",
-            "price": 600,
-            "id": 1.231897345983746e+23,
-            "cartId": 1614314962185
-          },
-          {
-            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1448634-00-A_0.jpg",
-            "name": "MODEL S 19 INCH",
-            "price": 3400,
-            "id": 1.2310934834905783e+26,
-            "cartId": 1614314962888
-          },
-          {
-            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/HEADWEAR/HATS/1462059-00-A_0.jpg",
-            "name": "TESLA CAP",
-            "price": 120,
-            "id": 1231235499999,
-            "cartId": 1614314963550
+            "name": "FAST CHARGER",
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+            "id": "12-2",
+            "price": "450",
+            "cartId": 1614333584069
           }
         ]
       },
@@ -87,13 +66,13 @@
           "grey",
           "blue"
         ],
-        "price": 116500,
+        "price": 79500,
         "interior": [
           "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$IBE00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432",
           "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$IWW00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432",
           "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$ICW00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432"
         ],
-        "intColor": 2,
+        "intColor": 1,
         "choosenColor": "blue",
         "specs": {
           "range": 812,
@@ -307,6 +286,111 @@
           "sec": 1.9,
           "version": "Plaid Plus"
         }
+      }
+    },
+    {
+      "account": "makers@gmail.com",
+      "id": 1614330045679,
+      "password": "123",
+      "buyHistory": {
+        "totalPrice": 2900,
+        "buyed": [
+          {
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/1017723-00-A_alt.jpg",
+            "id": 1614057156391,
+            "price": "150",
+            "name": "TESLA CAR COVER",
+            "cartId": 1614330068221
+          },
+          {
+            "name": "FAST CHARGER",
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+            "id": "12-2",
+            "price": "450",
+            "cartId": 1614330068882
+          },
+          {
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1457559-00-A_alt.jpg",
+            "id": 1614057277021,
+            "price": "2300",
+            "name": "MODAL S 21 INCH",
+            "cartId": 1614330069585
+          }
+        ]
+      },
+      "car": {
+        "name": "Model S",
+        "img": "https://tesla-cdn.thron.com/delivery/public/image/tesla/35d15221-0a5f-4dce-b484-a4db67b81dd2/bvlatuR/std/0x0/model-s@2x",
+        "img_white": [
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSW,$WS90,$IBE00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
+        ],
+        "img_red": [
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPMR,$WS90,$IBE00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPMR,$WS90,$IBE00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPMR,$WS90,$IBE00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
+        ],
+        "img_black": [
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PBSB,$WS10,$IWW00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PBSB,$WS10,$IWW00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
+        ],
+        "img_grey": [
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PMNG,$WS10,$IWW00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PMNG,$WS10,$IWW00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PMNG,$WS90,$IBE00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432"
+        ],
+        "img_blue": [
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSB,$WS10,$IWW00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,500,300,300&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSB,$WS10,$IWW00&view=SIDE&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=1300,450,300,300&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$MTS10,$PPSB,$WS10,$IWW00&view=RIMCLOSEUP&model=ms&size=1920&bkba_opt=1&version=v0028d202102180432&crop=0,950,160,0&version=v0028d202102180432"
+        ],
+        "id": "1-1",
+        "color": [
+          "red",
+          "white",
+          "black",
+          "grey",
+          "blue"
+        ],
+        "price": 114500,
+        "interior": [
+          "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$IBE00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$IWW00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432",
+          "https://static-assets.tesla.com/configurator/compositor?&options=$PPSW,$ICW00,$ST0Y&view=INTERIOR&model=ms&size=1920&version=v0028d202102180432&crop=0,0,0,0&version=v0028d202102180432"
+        ],
+        "intColor": 1,
+        "choosenColor": "black",
+        "specs": {
+          "range": 812,
+          "topSpeed": 300,
+          "sec": 1.9,
+          "version": "Plaid Plus"
+        }
+      }
+    },
+    {
+      "account": "emir@gmail.com",
+      "id": 1614333806252,
+      "password": "123",
+      "buyHistory": {
+        "totalPrice": 320,
+        "buyed": [
+          {
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/HEADWEAR/HATS/1462059-00-A_0.jpg",
+            "name": "TESLA CAP",
+            "price": 120,
+            "id": 1231235499999,
+            "cartId": 1614333831271
+          },
+          {
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/OUTERWEAR/JACKETS/5645685-00-A_0.jpg",
+            "id": "123321",
+            "price": 200,
+            "name": "MAN'S CORP JACKET",
+            "cartId": 1614333834482
+          }
+        ]
       }
     }
   ],
@@ -579,8 +663,8 @@
     },
     {
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1448634-00-A_0.jpg",
-      "name": "MODEL S 19 INCH",
-      "price": 3400,
+      "name": "MODEL S 19 asd",
+      "price": "34000",
       "id": 1.2310934834905783e+269
     },
     {
@@ -602,24 +686,54 @@
       "id": 1239949400087
     },
     {
-      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_X/EXTERIOR/1069533-00-A_1.jpg",
-      "id": 1614244542992456,
-      "price": "600",
-      "name": "MODEL X COVER"
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_X/WHEELS_TIRES/1109575_alt.jpg",
+      "id": 1614333567281,
+      "price": "500",
+      "name": "WHEEL TIRE"
     }
   ],
   "native-cart": [
     {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/1017723-00-A_alt.jpg",
+      "id": 1614330186075,
+      "price": "150",
+      "name": "TESLA CAR COVER"
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1457559-00-A_alt.jpg",
+      "id": 1614330188255,
+      "price": "2300",
+      "name": "MODAL S 21 INCH"
+    },
+    {
       "name": "FAST CHARGER",
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
-      "id": 1614313863341,
+      "id": 1614331938537,
       "price": "450"
     },
     {
       "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/1017723-00-A_alt.jpg",
-      "id": 1614313865559,
+      "id": 1614331941200,
       "price": "150",
       "name": "TESLA CAR COVER"
+    },
+    {
+      "name": "FAST CHARGER",
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+      "id": 1614334062322,
+      "price": "450"
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/1017723-00-A_alt.jpg",
+      "id": 1614334064260,
+      "price": "150",
+      "name": "TESLA CAR COVER"
+    },
+    {
+      "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1457559-00-A_alt.jpg",
+      "id": 1614334066504,
+      "price": "2300",
+      "name": "MODAL S 21 INCH"
     }
   ],
   "car_model_native": {
