@@ -1,4 +1,4 @@
-export const API = "https://teslareactnurba.herokuapp.com/home";
+export const API = "http://localhost:8000";
 
 export const API_REGISTRATION = `${API}/accounts`;
 export const API_CARS = `${API}/cars`;

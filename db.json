@@ -392,6 +392,44 @@
           }
         ]
       }
+    },
+    {
+      "account": "nurs@gmail.com",
+      "id": 1615560659071,
+      "password": "123",
+      "buyHistory": {
+        "totalPrice": 5200,
+        "buyed": [
+          {
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1457559-00-A_alt.jpg",
+            "id": 1614057277021,
+            "price": "2300",
+            "name": "MODAL S 21 INCH",
+            "cartId": 1615560642145
+          },
+          {
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/WHEELS_TIRES/1457559-00-A_alt.jpg",
+            "id": 1614057277021,
+            "price": "2300",
+            "name": "MODAL S 21 INCH",
+            "cartId": 1615560671796
+          },
+          {
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/1017723-00-A_alt.jpg",
+            "id": 1614057156391,
+            "price": "150",
+            "name": "TESLA CAR COVER",
+            "cartId": 1615560672515
+          },
+          {
+            "name": "FAST CHARGER",
+            "img": "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1457768-01-F_0.jpg",
+            "id": "12-2",
+            "price": "450",
+            "cartId": 1615560673323
+          }
+        ]
+      }
     }
   ],
   "cars": [

@@ -9,8 +9,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useHistory} from 'react-router-dom';
 
-
-
 const CarPage = () => {
     let history = useHistory();
 
